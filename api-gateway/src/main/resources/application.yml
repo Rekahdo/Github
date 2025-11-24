@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: api-gateway
+
+  cloud:
+    gateway:
+      routes:
+        - id: user-route
+          url: http://localhost:1020
+          predicate:
+            - Path=/api/v1/users/**
+          filters:
+            - RewritePath=/api/v1/users/(?<segment>.*),/api/v1/users/$\{segment}
+
+  doc:
+    api-docs:
+      path: /api-docs
+    swagger-ui:
+      path: /swagger-ui
+      disable-swagger-default-url: true
+
+server:
+  port: 1010

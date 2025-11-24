@@ -38,12 +38,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!-- EUREKA CLIENT -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-		</dependency>
-
 		<!-- API-GATEWAY -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
